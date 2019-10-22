@@ -12,8 +12,18 @@ clusters_client_config_dir: /var/run/secrets/atomic-reactor/client-config-secret
 koji:
   hub_url: https://KOJI_HUB_IP:8083/kojihub
   root_url: https://KOJI_HUB_IP:8083/kojifiles
+  reserve_build: false
   auth:
     ssl_certs_dir: /var/run/secrets/atomic-reactor/kojisecret
+
+odcs:
+  signing_intents:
+  - name: unsigned
+    keys: []
+  default_signing_intent: unsigned
+  api_url: invalid
+  auth:
+    ssl_certs_dir: invalid
 
 image_labels:
   vendor: "Red Hat, Inc."
